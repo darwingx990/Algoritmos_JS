@@ -5,8 +5,15 @@ let areaCirculo = pi * (Math.pow(radio, 2));
 console.log("El area del circulo es: " + areaCirculo);
 
 // 2.Encuentra la hipotenusa de un triángulo rectángulo
+let lado1 = 10;
+let lado2 = 20;
+let hipotenusa = Math.sqrt((Math.pow(lado1, 2)) + Math.pow(lado2, 2))
+console.log("La hipotenusa tiene un valor de " + hipotenusa + "CM.");
 
 // 3.Convierte grados a radianes
+let grados = 70;
+radianes = (grados * Math.PI) / 180;
+console.log(grados + " grados equivalen a " + radianes + " radianes.");
 
 // 4.Calcula seno y coseno de un ángulo en grados
 
