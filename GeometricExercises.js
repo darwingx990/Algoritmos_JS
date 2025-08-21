@@ -16,16 +16,25 @@ radianes = (grados * Math.PI) / 180;
 console.log(grados + " grados equivalen a " + radianes + " radianes.");
 
 // 4.Calcula seno y coseno de un ángulo en grados
+let angulo = (90 * Math.PI) / 180;
+let seno = Math.sin(angulo);
+let coseno = Math.cos(angulo);
+console.log("El Seno del angulo es " + seno);
+console.log("EL coseno del angulo es " + coseno);
 
 // 5.Calcula la distancia recorrida por un objeto en caída libre
 
+
 // 6.Calcula el volumen de una esfera
+
 
 // 7.Encuentra la distancia entre dos puntos en el plano
 
+
 // 8.Calcula la energía cinética de un objeto
+
 
 // 9.Calcula el área de un rectángulo conociendo su diagonal y un lado
 
-// 10.Calcula el área de un triángulo conociendo sus tres lados (formula de Heron)
 
+// 10.Calcula el área de un triángulo conociendo sus tres lados (formula de Heron)
