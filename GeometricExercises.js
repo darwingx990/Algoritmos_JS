@@ -22,14 +22,33 @@ let coseno = Math.cos(angulo);
 console.log("El Seno del angulo es " + seno);
 console.log("EL coseno del angulo es " + coseno);
 
-// 5.Calcula la distancia recorrida por un objeto en caída libre
+// 5.Calcula la distancia recorrida por un objeto en caída libre. h = 1/2*g*t^2
+let gravedad = 9.8;
+let tiempo = 3;
+let distancia = 0.5 * gravedad * tiempo * tiempo;
+console.log("La distancia recorrida del objeto X en caida libre es de: " + distancia + " metros");
 
-
-// 6.Calcula el volumen de una esfera
-
+// 6.Calcula el volumen de una esfera - (V = 4/3* PI * radio^2).
+let radioEsfera = 15;
+let volumen = 4 / 3 * Math.PI * Math.pow(radioEsfera, 2);
+console.log("El volumen de la esfera es de: " + volumen + " CM.");
 
 // 7.Encuentra la distancia entre dos puntos en el plano
+function calcularDistancia(x1, y1, x2, y2) {
+    const dx = x2 - x1;
+    const dy = y2 - y1;
+    const distancia = Math.sqrt(dx * dx + dy * dy);
+    return distancia;
+}
 
+let puntoA_x = 1;
+let puntoA_y = 2;
+let puntoB_x = 4;
+let puntoB_y = 6;
+
+let resultado = calcularDistancia(puntoA_x, puntoA_y, puntoB_x, puntoB_y);
+
+console.log("La distancia entre los dos puntos en el plano cartesiano es de: " + resultado + " CM.");
 
 // 8.Calcula la energía cinética de un objeto
 
