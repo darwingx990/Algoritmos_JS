@@ -27,7 +27,7 @@ let cantidadDeAs = 0;
 let texto = "Mi mamá me mima. Mi mamá me ama. Amo a mamá"
 for (let i = 0; i <= texto.length; i++) {
     if (texto[i] == "a" || texto[i] == "A" || texto[i] == "á") {
-        can | tidadDeAs++;
+        cantidadDeAs++;
     }
 }
 console.log("El texto '" + texto + "', tiene un total de " + cantidadDeAs + " letras 'a'.");
@@ -71,8 +71,27 @@ function potenciacion(base, exponente) {
 potenciacion(8, 2);
 
 // 9. Desarrolla una función que genere y devuelva los primeros N términos de la serie de Fibonacci.
+function Fibonacci(numero) {
+    let serieFibonacci = [0, 1];
+    let resultado = 0;
+    let container = 1
+    for (let i = 2; i < numero; i++) {
+        serieFibonacci[i] = serieFibonacci[i - 1] + serieFibonacci[i - 2]
+    }
+    console.log("La serie fibonacci del numero " + numero + " es " + serieFibonacci);
+}
 
-
+Fibonacci(9);
 
 // 10. Desarrolla una función que genere el total de las tablas de multiplicar dado un numero entero.
+function totalTablasIterativo(numero, hasta = 10) {
+    let total = 0;
+    for (let a = 1; a <= numero; a++) {
+        for (let b = 1; b <= hasta; b++) {
+            total += a * b;
+        }
+    }
+    console.log(total);;
+}
 
+totalTablasIterativo(5)
