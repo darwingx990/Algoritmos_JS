@@ -51,9 +51,21 @@ let resultado = calcularDistancia(puntoA_x, puntoA_y, puntoB_x, puntoB_y);
 console.log("La distancia entre los dos puntos en el plano cartesiano es de: " + resultado + " CM.");
 
 // 8.Calcula la energía cinética de un objeto
-
+let masa = 15;
+let velocidad = 3;
+let energiaCinetica = 1 / 2 * masa * Math.pow(velocidad, 2);
+console.log("La energia Cinética del objeto es de " + energiaCinetica);
 
 // 9.Calcula el área de un rectángulo conociendo su diagonal y un lado
-
+let diagonal = 21;
+let lado = 14;
+let altura = Math.sqrt(Math.pow(diagonal, 2) - Math.pow(lado, 2))
+console.log(altura);
+let areaRectangulo = lado * altura;
+console.log("El area del rectangulo es de: " + areaRectangulo + " metros.");
 
 // 10.Calcula el área de un triángulo conociendo sus tres lados (formula de Heron)
+let base = 20;
+let alturaTriangulo = 12;
+let areaTriangulo = (base * alturaTriangulo) / 2;
+console.log("El area del triangulo es de " + areaTriangulo + " metros.");
