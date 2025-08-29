@@ -56,8 +56,16 @@ let arrayPares = [2, 35, 66, 12, 53, 9, 78];
 numerosPares(arrayPares);
 
 // 7. Implementa una función que calcule la suma de los cuadrados de los primeros N números naturales.
-
-
+function sumaCuadrados(numero) {
+    let sumaNumeros = 0;
+    for (let contador = 1; contador <= numero; contador++) {
+        console.log(contador*contador);
+        sumaNumeros += contador * contador;
+        console.log(sumaNumeros + " + ");
+    }
+    console.log("La suma de los numeros al cuadrado del 1 al " + numero + " es de " + sumaNumeros);
+}
+sumaCuadrados(9);
 
 // 8. Escribe una función que calcule la potencia de un número (base^exponente) utilizando un ciclo for, sin usar el operador de potencia **.
 function potenciacion(base, exponente) {

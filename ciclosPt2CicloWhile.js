@@ -42,16 +42,12 @@ while (contador < texto.length) {
 console.log("El texto '" + texto + "', tiene un total de " + cantidadDeAs + " letras 'a'.");
 
 // 5. Algoritmo para calcular el factorial de un número
-
-
-
-
-
-
 let number = 6;
 let factorial = 1;
-for (let i = 1; i <= number; i++) {
-    factorial *= i;
+let contad = 1;
+while (contad <= number) {
+    factorial *= contad;
+    contad++;
     console.log(factorial);
 }
 console.log("El factorial de " + number + " es " + factorial);
@@ -59,11 +55,12 @@ console.log("El factorial de " + number + " es " + factorial);
 // 6. Escribe una función que reciba un array de números y devuelva un nuevo array que contenga solo los números pares.
 function numerosPares(arrayNumeros) {
     let numerosPares = [];
-    for (let i = 0; i < arrayNumeros.length; i++) {
-        if (arrayNumeros[i] % 2 == 0) {
-            numerosPares.push(arrayNumeros[i]);
-            // console.log(numerosPares);
+    let contador = 0;
+    while (contador < arrayNumeros.length) {
+        if (arrayNumeros[contador] % 2 == 0) {
+            numerosPares.push(arrayNumeros[contador])
         }
+        contador++;
     }
     console.log("Los numeros pares que hay en el arry son: " + numerosPares);
 }
@@ -71,8 +68,18 @@ let arrayPares = [2, 35, 66, 12, 53, 9, 78];
 numerosPares(arrayPares);
 
 // 7. Implementa una función que calcule la suma de los cuadrados de los primeros N números naturales.
-
-
+function sumaCuadrados(numero) {
+    let sumaNumeros = 0;
+    let contador = 1;
+    while (contador <= numero) {
+        console.log(Math.pow(contador, 2));
+        sumaNumeros += contador * contador;
+        console.log(sumaNumeros + " + ");
+        contador++;
+    }
+    console.log("La suma de los numeros al cuadrado del 1 al " + numero + " es de " + sumaNumeros);
+}
+sumaCuadrados(6);
 
 // 8. Escribe una función que calcule la potencia de un número (base^exponente) utilizando un ciclo for, sin usar el operador de potencia **.
 function potenciacion(base, exponente) {
