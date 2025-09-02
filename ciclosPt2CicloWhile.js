@@ -84,21 +84,23 @@ sumaCuadrados(6);
 // 8. Escribe una función que calcule la potencia de un número (base^exponente) utilizando un ciclo for, sin usar el operador de potencia **.
 function potenciacion(base, exponente) {
     let potencia = 1;
-    for (let i = 0; i < exponente; i++) {
+    let i = 1;
+    while (i <= exponente) {
         potencia *= base;
+        i++;
     }
     console.log("El resultado de la portenciacion es: " + potencia);
 }
 
-potenciacion(8, 2);
+potenciacion(2, 8);
 
 // 9. Desarrolla una función que genere y devuelva los primeros N términos de la serie de Fibonacci.
 function Fibonacci(numero) {
     let serieFibonacci = [0, 1];
-    let resultado = 0;
-    let container = 1
-    for (let i = 2; i < numero; i++) {
+    let i = 2;
+    while (i < numero) {
         serieFibonacci[i] = serieFibonacci[i - 1] + serieFibonacci[i - 2]
+        i++;
     }
     console.log("La serie fibonacci del numero " + numero + " es " + serieFibonacci);
 }
@@ -108,12 +110,16 @@ Fibonacci(9);
 // 10. Desarrolla una función que genere el total de las tablas de multiplicar dado un numero entero.
 function totalTablasIterativo(numero, hasta = 10) {
     let total = 0;
-    for (let a = 1; a <= numero; a++) {
-        for (let b = 1; b <= hasta; b++) {
-            total += a * b;
+    let i = 1;
+    let cont = 1;
+    while (i <= numero) {
+        while (cont <= hasta) {
+            total += i * cont;
+            cont++;
         }
+        i++
     }
-    console.log(total);;
+    console.log("El total de tablas de multiplicar del " + numero + " hasta el " + hasta + " es de " + total);;
 }
 
 totalTablasIterativo(5)
