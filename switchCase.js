@@ -11,17 +11,43 @@ let mediaAtitmetica = suma / numeros.length
 console.log("La media aritmetica del array es " + mediaAtitmetica); 3
 
 // 1. Algoritmo para imprimir números del 1 al 10
-function numbersFrom1To10() {
+function numbersFrom1ToN(cycle, total) {
+    let ciclo = cycle.toLowerCase();
     let i = 1;
-    console.log("---- Numero del 1 al 10 ----");
-    do {
-        console.log("          Numero " + i);
+    switch (ciclo) {
+        case "for":
+            console.log("Ciclo For ");
+            console.log("---- Numeros del 1 al " + total + " ----");
+            for (i; i <= total; i++) {
+                console.log("           Numero " + i);
+            }
+            break;
 
-        i++;
-    } while (i <= 10)
+        case "while":
+            console.log("Ciclo While ");
+            console.log("---- Numeros del 1 al " + total + " ----");
+            while (i <= total) {
+                console.log("           Numero " + i);
+                i++;
+            }
+            break;
+
+        case "dowhile":
+            console.log("Do While ");
+            console.log("---- Numeros del 1 al " + total + " ----");
+            do {
+                console.log("          Numero " + i);
+                i++;
+            } while (i <= total)
+            break;
+
+        default:
+            console.log("Has ingresado un valor invalido.");;
+    }
 }
-
-numbersFrom1To10();
+let bucle = "do while";
+let total = 20;
+numbersFrom1ToN(bucle, total);
 
 // 2. Algoritmo para sumar los primeros 10 números
 function sumarNumeros(numero) {
@@ -41,7 +67,7 @@ function tablaDeMultiplicar(number) {
     let i;
     do {
         console.log("           " + number + " X " + i + " = " + number * i);
-    } while (i < number); 
+    } while (i < number);
     console.log("---------------------------------------------");
     console.log("     Tabla de multiplicar del " + number);
     console.log("---------------------------------------------");
