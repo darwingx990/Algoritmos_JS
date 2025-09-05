@@ -19,11 +19,13 @@ console.log("La suma de los numeros del 1 al 10 es igual a: " + totalSuma);
 
 // 3. Algoritmo para generar la tabla de un numero dado por argumento en una función
 function tablaDeMultiplicar(number) {
+    let i = 0
     console.log("---------------------------------------------");
     console.log("     Tabla de multiplicar del " + number);
     console.log("---------------------------------------------");
-    for (let i = 1; i <= 10; i++) {
+    while (i <= 10) {
         console.log("           " + number + " X " + i + " = " + number * i);
+        i++;
     }
 }
 tablaDeMultiplicar(5);
