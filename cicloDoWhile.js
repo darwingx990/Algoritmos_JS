@@ -115,23 +115,25 @@ sumaCuadrados(6);
 function potenciacion(base, exponente) {
     let potencia = 1;
     let i = 1;
-    while (i <= exponente) {
+    do {
         potencia *= base;
         i++;
     }
+    while (i <= exponente)
     console.log("El resultado de la portenciacion es: " + potencia);
 }
 
-potenciacion(2, 8);
+potenciacion(2, 4);
 
 // 9. Desarrolla una función que genere y devuelva los primeros N términos de la serie de Fibonacci.
 function Fibonacci(numero) {
     let serieFibonacci = [0, 1];
     let i = 2;
-    while (i < numero) {
+    do {
         serieFibonacci[i] = serieFibonacci[i - 1] + serieFibonacci[i - 2]
         i++;
     }
+    while (i < numero)
     console.log("La serie fibonacci del numero " + numero + " es " + serieFibonacci);
 }
 
@@ -142,13 +144,14 @@ function totalTablasIterativo(numero, hasta = 10) {
     let total = 0;
     let i = 1;
     let cont = 1;
-    while (i <= numero) {
+    do {
         while (cont <= hasta) {
             total += i * cont;
             cont++;
         }
         i++
     }
+    while (i <= numero)
     console.log("El total de tablas de multiplicar del " + numero + " hasta el " + hasta + " es de " + total);;
 }
 
